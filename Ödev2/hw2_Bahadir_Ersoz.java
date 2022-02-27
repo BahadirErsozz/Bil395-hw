@@ -127,27 +127,27 @@ public class hw2_Bahadir_Ersoz {
     public static void reduce(int i){
         // all the rules
         if(i == 1){
-            stack = stack.substring(0,stack.indexOf("E"));
+            stack = stack.substring(0,stack.lastIndexOf("E"));
             stack = stack.concat("E" + lrTable[Integer.parseInt(stack.charAt(stack.length() - 1) + "")][6]);
         }
         if(i == 2){
-            stack = stack.substring(0,stack.indexOf("T"));
+            stack = stack.substring(0,stack.lastIndexOf("T"));
             stack = stack.concat("E" + lrTable[Integer.parseInt(stack.charAt(stack.length() - 1) + "")][6]);
         }
         if(i == 3){
-            stack = stack.substring(0,stack.indexOf("T"));
+            stack = stack.substring(0,stack.lastIndexOf("T"));
             stack = stack.concat("T" + lrTable[Integer.parseInt(stack.charAt(stack.length() - 1) + "")][7]);
         }
         if(i == 4){
-            stack = stack.substring(0,stack.indexOf("F"));
+            stack = stack.substring(0,stack.lastIndexOf("F"));
             stack = stack.concat("T" + lrTable[Integer.parseInt(stack.charAt(stack.length() - 1) + "")][7]);
         }
         if(i == 5){
-            stack = stack.substring(0,stack.indexOf("("));
+            stack = stack.substring(0,stack.lastIndexOf("("));
             stack = stack.concat("F" + lrTable[Integer.parseInt(stack.charAt(stack.length() - 1) + "")][8]);
         }
         if(i == 6){
-            stack = stack.substring(0,stack.indexOf("id"));
+            stack = stack.substring(0,stack.lastIndexOf("id"));
             stack = stack.concat("F" + lrTable[Integer.parseInt(stack.charAt(stack.length() - 1) + "")][8]);
         }
 
